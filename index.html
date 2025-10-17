@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Osama | Flutter & AI Developer</title>
+  <title>Osama Alsharabi | Flutter & AI Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -23,6 +23,20 @@
       --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
+    :root[data-theme="light"] {
+      --bg-1: #f0f6ff;
+      --bg-2: #e6eef8;
+      --bg-3: #d9e3f1;
+      --glass: rgba(0,0,0,0.05);
+      --accent1: #b3a45c;
+      --accent2: #5cb3a4;
+      --accent3: #5c61b3;
+      --text-primary: #0a0f1a;
+      --text-secondary: rgba(10,15,26,0.7);
+      --text-muted: rgba(10,15,26,0.5);
+      --shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -39,6 +53,11 @@
       color: var(--text-primary);
       line-height: 1.6;
       overflow-x: hidden;
+      transition: var(--transition);
+    }
+
+    body[dir="rtl"] {
+      font-family: 'Cairo', 'Inter', sans-serif;
     }
 
     .container {
@@ -59,6 +78,11 @@
       background: rgba(10, 15, 26, 0.8);
       border-bottom: 1px solid rgba(255,255,255,0.05);
       transition: var(--transition);
+    }
+
+    [data-theme="light"] header {
+      background: rgba(240, 246, 255, 0.8);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
     header.scrolled {
@@ -158,8 +182,16 @@
       border: 1px solid rgba(255,255,255,0.1);
     }
 
+    [data-theme="light"] .btn-secondary {
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
     .btn-secondary:hover {
       background: rgba(255,255,255,0.08);
+    }
+
+    [data-theme="light"] .btn-secondary:hover {
+      background: rgba(0,0,0,0.05);
     }
 
     .language-toggle {
@@ -168,6 +200,10 @@
       border-radius: 10px;
       padding: 4px;
       border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    [data-theme="light"] .language-toggle {
+      border: 1px solid rgba(0,0,0,0.05);
     }
 
     .lang-btn {
@@ -184,6 +220,10 @@
     .lang-btn.active {
       background: rgba(255,255,255,0.1);
       color: var(--text-primary);
+    }
+
+    [data-theme="light"] .lang-btn.active {
+      background: rgba(0,0,0,0.1);
     }
 
     /* Hero Section */
@@ -239,6 +279,10 @@
       transition: var(--transition);
     }
 
+    [data-theme="light"] .profile-card {
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
     .profile-card:hover {
       transform: translateY(-10px);
     }
@@ -270,6 +314,10 @@
       align-items: center;
       gap: 10px;
       animation: float 6s ease-in-out infinite;
+    }
+
+    [data-theme="light"] .floating-element {
+      border: 1px solid rgba(0,0,0,0.05);
     }
 
     .floating-element:nth-child(1) {
@@ -359,6 +407,10 @@
       transition: var(--transition);
     }
 
+    [data-theme="light"] .skill-category {
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
     .skill-category:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow);
@@ -403,6 +455,11 @@
       border: 1px solid rgba(255,255,255,0.05);
     }
 
+    [data-theme="light"] .skill-tag {
+      background: rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
     /* Projects Section */
     .projects-grid {
       display: grid;
@@ -416,6 +473,10 @@
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.05);
       transition: var(--transition);
+    }
+
+    [data-theme="light"] .project-card {
+      border: 1px solid rgba(0,0,0,0.05);
     }
 
     .project-card:hover {
@@ -466,6 +527,10 @@
       padding: 5px 10px;
       border-radius: 15px;
       font-size: 12px;
+    }
+
+    [data-theme="light"] .project-tag {
+      background: rgba(0,0,0,0.05);
     }
 
     .project-links {
@@ -552,11 +617,19 @@
       transform: translateY(-3px);
     }
 
+    [data-theme="light"] .social-link:hover {
+      background: rgba(0,0,0,0.1);
+    }
+
     .contact-form {
       background: var(--glass);
       border-radius: 15px;
       padding: 30px;
       border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    [data-theme="light"] .contact-form {
+      border: 1px solid rgba(0,0,0,0.05);
     }
 
     .form-group {
@@ -581,6 +654,11 @@
       transition: var(--transition);
     }
 
+    [data-theme="light"] .form-control {
+      background: rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
     .form-control:focus {
       outline: none;
       border-color: var(--accent2);
@@ -597,6 +675,10 @@
       background: var(--bg-3);
       padding: 60px 0 30px;
       border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    [data-theme="light"] footer {
+      border-top: 1px solid rgba(0,0,0,0.05);
     }
 
     .footer-content {
@@ -654,6 +736,10 @@
       font-size: 14px;
     }
 
+    [data-theme="light"] .copyright {
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
     /* Animations */
     .fade-in {
       opacity: 0;
@@ -704,7 +790,7 @@
       }
     }
 
-    /* Dark mode toggle */
+    /* Theme toggle */
     .theme-toggle {
       position: fixed;
       bottom: 30px;
@@ -723,8 +809,34 @@
       transition: var(--transition);
     }
 
+    [data-theme="light"] .theme-toggle {
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
     .theme-toggle:hover {
       transform: rotate(30deg);
+    }
+
+    /* RTL Support */
+    body[dir="rtl"] .section-header h2::after {
+      left: auto;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    body[dir="rtl"] .footer-col h3::after {
+      left: auto;
+      right: 0;
+    }
+
+    body[dir="rtl"] .floating-element:nth-child(1) {
+      right: auto;
+      left: -20px;
+    }
+
+    body[dir="rtl"] .floating-element:nth-child(2) {
+      left: auto;
+      right: -20px;
     }
   </style>
 </head>
@@ -734,26 +846,26 @@
     <div class="container">
       <div class="header-content">
         <a href="#" class="logo">
-          <div class="logo-icon">OS</div>
+          <div class="logo-icon">OA</div>
           <div class="logo-text">
-            <h1>Osama</h1>
-            <span>Flutter & AI Developer</span>
+            <h1 class="name">Osama Alsharabi</h1>
+            <span class="title">Flutter & AI Developer</span>
           </div>
         </a>
         
         <nav>
-          <a href="#home" class="nav-link active">Home</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#home" class="nav-link active" data-en="Home" data-ar="الرئيسية">Home</a>
+          <a href="#skills" class="nav-link" data-en="Skills" data-ar="المهارات">Skills</a>
+          <a href="#projects" class="nav-link" data-en="Projects" data-ar="المشاريع">Projects</a>
+          <a href="#contact" class="nav-link" data-en="Contact" data-ar="اتصل بي">Contact</a>
           
           <div class="language-toggle">
-            <button class="lang-btn active">EN</button>
-            <button class="lang-btn">AR</button>
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ar">AR</button>
           </div>
           
-          <button class="btn btn-primary">
-            <i class="fas fa-paper-plane"></i> Hire Me
+          <button class="btn btn-primary" data-en="View Projects" data-ar="عرض المشاريع">
+            <i class="fas fa-eye"></i> <span>View Projects</span>
           </button>
         </nav>
       </div>
@@ -765,43 +877,43 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <h2>Building Digital Experiences with Flutter & AI</h2>
-          <p>I'm Osama, a Flutter developer and AI enthusiast based in Sana'a, Yemen. I create beautiful, functional mobile applications with clean code and delightful user experiences.</p>
+          <h2 data-en="Building Digital Experiences with Flutter & AI" data-ar="بناء تجارب رقمية باستخدام Flutter والذكاء الاصطناعي">Building Digital Experiences with Flutter & AI</h2>
+          <p data-en="I'm Osama Alsharabi, a Flutter developer and AI enthusiast based in Sana'a, Yemen. I create beautiful, functional mobile applications with clean code and delightful user experiences." data-ar="أنا أسامة الشرعبي، مطور Flutter ومهتم بالذكاء الاصطناعي مقيم في صنعاء، اليمن. أصنع تطبيقات جوال جميلة ووظيفية ببرمجة نظيرة وتجارب مستخدم ممتعة.">I'm Osama Alsharabi, a Flutter developer and AI enthusiast based in Sana'a, Yemen. I create beautiful, functional mobile applications with clean code and delightful user experiences.</p>
           
           <div class="hero-btns">
-            <button class="btn btn-primary">
-              <i class="fas fa-eye"></i> View Projects
+            <button class="btn btn-primary" data-en="View Projects" data-ar="عرض المشاريع">
+              <i class="fas fa-eye"></i> <span>View Projects</span>
             </button>
-            <button class="btn btn-secondary">
-              <i class="fas fa-download"></i> Download CV
+            <button class="btn btn-secondary" data-en="Download CV" data-ar="تحميل السيرة الذاتية">
+              <i class="fas fa-download"></i> <span>Download CV</span>
             </button>
           </div>
         </div>
         
         <div class="hero-image">
           <div class="profile-card">
-            <img src="pic.png" alt="Osama">
+            <img src="pic.png" alt="Osama Alsharabi">
             
             <div class="floating-elements">
               <div class="floating-element">
                 <div class="floating-icon flutter">
                   <i class="fab fa-flutter"></i>
                 </div>
-                <span>Flutter Expert</span>
+                <span data-en="Flutter Expert" data-ar="خبير Flutter">Flutter Expert</span>
               </div>
               
               <div class="floating-element">
                 <div class="floating-icon ai">
                   <i class="fas fa-brain"></i>
                 </div>
-                <span>AI Enthusiast</span>
+                <span data-en="AI Enthusiast" data-ar="مهتم بالذكاء الاصطناعي">AI Enthusiast</span>
               </div>
               
               <div class="floating-element">
                 <div class="floating-icon ui">
                   <i class="fas fa-palette"></i>
                 </div>
-                <span>UI/UX Designer</span>
+                <span data-en="UI/UX Designer" data-ar="مصمم واجهات">UI/UX Designer</span>
               </div>
             </div>
           </div>
@@ -814,8 +926,8 @@
   <section class="skills" id="skills">
     <div class="container">
       <div class="section-header">
-        <h2>My Skills</h2>
-        <p>I specialize in mobile development with Flutter and have a strong interest in AI and machine learning applications.</p>
+        <h2 data-en="My Skills" data-ar="مهاراتي">My Skills</h2>
+        <p data-en="I specialize in mobile development with Flutter and have a strong interest in AI and machine learning applications." data-ar="أتخصص في تطوير تطبيقات الجوال باستخدام Flutter ولدي اهتمام قوي بتطبيقات الذكاء الاصطناعي والتعلم الآلي.">I specialize in mobile development with Flutter and have a strong interest in AI and machine learning applications.</p>
       </div>
       
       <div class="skills-container">
@@ -824,7 +936,7 @@
             <div class="skill-icon mobile-dev">
               <i class="fas fa-mobile-alt"></i>
             </div>
-            <h3>Mobile Development</h3>
+            <h3 data-en="Mobile Development" data-ar="تطوير الجوال">Mobile Development</h3>
           </div>
           
           <div class="skill-list">
@@ -832,8 +944,8 @@
             <span class="skill-tag">Dart</span>
             <span class="skill-tag">Firebase</span>
             <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">State Management</span>
-            <span class="skill-tag">App Publishing</span>
+            <span class="skill-tag" data-en="State Management" data-ar="إدارة الحالة">State Management</span>
+            <span class="skill-tag" data-en="App Publishing" data-ar="نشر التطبيقات">App Publishing</span>
           </div>
         </div>
         
@@ -842,16 +954,16 @@
             <div class="skill-icon ai-ml">
               <i class="fas fa-robot"></i>
             </div>
-            <h3>AI & Machine Learning</h3>
+            <h3 data-en="AI & Machine Learning" data-ar="الذكاء الاصطناعي والتعلم الآلي">AI & Machine Learning</h3>
           </div>
           
           <div class="skill-list">
             <span class="skill-tag">TensorFlow</span>
             <span class="skill-tag">Python</span>
-            <span class="skill-tag">Computer Vision</span>
+            <span class="skill-tag" data-en="Computer Vision" data-ar="الرؤية الحاسوبية">Computer Vision</span>
             <span class="skill-tag">NLP</span>
-            <span class="skill-tag">Data Analysis</span>
-            <span class="skill-tag">ML Integration</span>
+            <span class="skill-tag" data-en="Data Analysis" data-ar="تحليل البيانات">Data Analysis</span>
+            <span class="skill-tag" data-en="ML Integration" data-ar="دمج التعلم الآلي">ML Integration</span>
           </div>
         </div>
         
@@ -860,16 +972,16 @@
             <div class="skill-icon ui-design">
               <i class="fas fa-paint-brush"></i>
             </div>
-            <h3>UI/UX Design</h3>
+            <h3 data-en="UI/UX Design" data-ar="تصميم الواجهات">UI/UX Design</h3>
           </div>
           
           <div class="skill-list">
             <span class="skill-tag">Figma</span>
             <span class="skill-tag">Adobe XD</span>
-            <span class="skill-tag">Prototyping</span>
-            <span class="skill-tag">User Research</span>
-            <span class="skill-tag">Interaction Design</span>
-            <span class="skill-tag">Design Systems</span>
+            <span class="skill-tag" data-en="Prototyping" data-ar="النماذج الأولية">Prototyping</span>
+            <span class="skill-tag" data-en="User Research" data-ar="بحث المستخدم">User Research</span>
+            <span class="skill-tag" data-en="Interaction Design" data-ar="تصميم التفاعل">Interaction Design</span>
+            <span class="skill-tag" data-en="Design Systems" data-ar="أنظمة التصميم">Design Systems</span>
           </div>
         </div>
       </div>
@@ -880,8 +992,8 @@
   <section class="projects" id="projects">
     <div class="container">
       <div class="section-header">
-        <h2>Featured Projects</h2>
-        <p>Here are some of my recent projects that showcase my skills in Flutter development and AI integration.</p>
+        <h2 data-en="Featured Projects" data-ar="المشاريع المميزة">Featured Projects</h2>
+        <p data-en="Here are some of my recent projects that showcase my skills in Flutter development and AI integration." data-ar="إليك بعض مشاريعي الحديثة التي تعرض مهاراتي في تطوير Flutter ودمج الذكاء الاصطناعي.">Here are some of my recent projects that showcase my skills in Flutter development and AI integration.</p>
       </div>
       
       <div class="projects-grid">
@@ -891,8 +1003,8 @@
           </div>
           
           <div class="project-content">
-            <h3>Smart Hotel Locator</h3>
-            <p>A Flutter app with Google Maps integration, real-time location tracking, and hotel booking functionality.</p>
+            <h3 data-en="Smart Hotel Locator" data-ar="محدد الفنادق الذكي">Smart Hotel Locator</h3>
+            <p data-en="A Flutter app with Google Maps integration, real-time location tracking, and hotel booking functionality." data-ar="تطبيق Flutter مع دمج خرائط جوجل، تتبع الموقع في الوقت الحقيقي، ووظيفة حجز الفنادق.">A Flutter app with Google Maps integration, real-time location tracking, and hotel booking functionality.</p>
             
             <div class="project-tags">
               <span class="project-tag">Flutter</span>
@@ -903,10 +1015,10 @@
             
             <div class="project-links">
               <a href="#" class="project-link">
-                <i class="fab fa-github"></i> Code
+                <i class="fab fa-github"></i> <span data-en="Code" data-ar="الكود">Code</span>
               </a>
               <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
+                <i class="fas fa-external-link-alt"></i> <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
               </a>
             </div>
           </div>
@@ -918,22 +1030,22 @@
           </div>
           
           <div class="project-content">
-            <h3>Fatigue Detector (SweatIndex)</h3>
-            <p>An AI-powered application that analyzes fatigue levels using HRV data and sleep patterns with deep learning models.</p>
+            <h3 data-en="Fatigue Detector (SweatIndex)" data-ar="كاشف التعب (مؤشر التعرق)">Fatigue Detector (SweatIndex)</h3>
+            <p data-en="An AI-powered application that analyzes fatigue levels using HRV data and sleep patterns with deep learning models." data-ar="تطبيق مدعوم بالذكاء الاصطناعي يحلل مستويات التعب باستخدام بيانات HRV وأنماط النوم مع نماذج التعلم العميق.">An AI-powered application that analyzes fatigue levels using HRV data and sleep patterns with deep learning models.</p>
             
             <div class="project-tags">
               <span class="project-tag">Python</span>
               <span class="project-tag">TensorFlow</span>
               <span class="project-tag">Flutter</span>
-              <span class="project-tag">Data Visualization</span>
+              <span class="project-tag" data-en="Data Visualization" data-ar="تصور البيانات">Data Visualization</span>
             </div>
             
             <div class="project-links">
               <a href="#" class="project-link">
-                <i class="fab fa-github"></i> Code
+                <i class="fab fa-github"></i> <span data-en="Code" data-ar="الكود">Code</span>
               </a>
               <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
+                <i class="fas fa-external-link-alt"></i> <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
               </a>
             </div>
           </div>
@@ -945,22 +1057,22 @@
           </div>
           
           <div class="project-content">
-            <h3>Season Classifier</h3>
-            <p>A machine learning model that classifies images by season, integrated with a mobile app for real-time classification.</p>
+            <h3 data-en="Season Classifier" data-ar="مصنف الفصول">Season Classifier</h3>
+            <p data-en="A machine learning model that classifies images by season, integrated with a mobile app for real-time classification." data-ar="نموذج تعلم آلي يصنف الصور حسب الفصول، مدمج مع تطبيق جوال للتصنيف في الوقت الحقيقي.">A machine learning model that classifies images by season, integrated with a mobile app for real-time classification.</p>
             
             <div class="project-tags">
               <span class="project-tag">Python</span>
               <span class="project-tag">Flask</span>
               <span class="project-tag">Flutter</span>
-              <span class="project-tag">Image Processing</span>
+              <span class="project-tag" data-en="Image Processing" data-ar="معالجة الصور">Image Processing</span>
             </div>
             
             <div class="project-links">
               <a href="#" class="project-link">
-                <i class="fab fa-github"></i> Code
+                <i class="fab fa-github"></i> <span data-en="Code" data-ar="الكود">Code</span>
               </a>
               <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
+                <i class="fas fa-external-link-alt"></i> <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
               </a>
             </div>
           </div>
@@ -973,8 +1085,8 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header">
-        <h2>Get In Touch</h2>
-        <p>Have a project in mind or want to discuss potential collaboration? Feel free to reach out!</p>
+        <h2 data-en="Get In Touch" data-ar="تواصل معي">Get In Touch</h2>
+        <p data-en="Have a project in mind or want to discuss potential collaboration? Feel free to reach out!" data-ar="هل لديك مشروع في ذهنك أو تريد مناقشة تعاون محتمل؟ لا تتردد في التواصل!">Have a project in mind or want to discuss potential collaboration? Feel free to reach out!</p>
       </div>
       
       <div class="contact-container">
@@ -984,8 +1096,8 @@
               <i class="fas fa-map-marker-alt"></i>
             </div>
             <div class="contact-text">
-              <h4>Location</h4>
-              <p>Sana'a, Yemen</p>
+              <h4 data-en="Location" data-ar="الموقع">Location</h4>
+              <p data-en="Sana'a, Yemen" data-ar="صنعاء، اليمن">Sana'a, Yemen</p>
             </div>
           </div>
           
@@ -994,8 +1106,8 @@
               <i class="fas fa-envelope"></i>
             </div>
             <div class="contact-text">
-              <h4>Email</h4>
-              <p>hello@osama.dev</p>
+              <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
+              <p>osama.ahmed.alsharabii@gmail.com</p>
             </div>
           </div>
           
@@ -1004,23 +1116,20 @@
               <i class="fas fa-phone-alt"></i>
             </div>
             <div class="contact-text">
-              <h4>Phone</h4>
-              <p>+967 123 456 789</p>
+              <h4 data-en="Phone" data-ar="الهاتف">Phone</h4>
+              <p>+967 778870086</p>
             </div>
           </div>
           
           <div class="social-links">
-            <a href="#" class="social-link">
+            <a href="https://github.com/osama-ahmed-alsharabi" class="social-link">
               <i class="fab fa-github"></i>
             </a>
-            <a href="#" class="social-link">
+            <a href="https://www.linkedin.com/in/osama-alsharabi-b6949a309/" class="social-link">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" class="social-link">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-link">
-              <i class="fab fa-behance"></i>
+            <a href="https://wa.me/967778870086" class="social-link">
+              <i class="fab fa-whatsapp"></i>
             </a>
           </div>
         </div>
@@ -1028,27 +1137,27 @@
         <div class="contact-form">
           <form id="contactForm">
             <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" class="form-control" placeholder="Your Name">
+              <label for="name" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+              <input type="text" id="name" class="form-control" data-en-placeholder="Your Name" data-ar-placeholder="اسمك">
             </div>
             
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" class="form-control" placeholder="your.email@example.com">
+              <label for="email" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+              <input type="email" id="email" class="form-control" data-en-placeholder="your.email@example.com" data-ar-placeholder="بريدك@example.com">
             </div>
             
             <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" class="form-control" placeholder="Project Discussion">
+              <label for="subject" data-en="Subject" data-ar="الموضوع">Subject</label>
+              <input type="text" id="subject" class="form-control" data-en-placeholder="Project Discussion" data-ar-placeholder="مناقشة مشروع">
             </div>
             
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" class="form-control" placeholder="Tell me about your project..."></textarea>
+              <label for="message" data-en="Message" data-ar="الرسالة">Message</label>
+              <textarea id="message" class="form-control" data-en-placeholder="Tell me about your project..." data-ar-placeholder="أخبرني عن مشروعك..."></textarea>
             </div>
             
             <button type="submit" class="btn btn-primary">
-              <i class="fas fa-paper-plane"></i> Send Message
+              <i class="fas fa-paper-plane"></i> <span data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span>
             </button>
           </form>
         </div>
@@ -1061,45 +1170,45 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-col">
-          <h3>Osama</h3>
-          <p>Flutter developer and AI enthusiast creating beautiful, functional mobile applications with clean code and delightful user experiences.</p>
+          <h3 class="name">Osama Alsharabi</h3>
+          <p data-en="Flutter developer and AI enthusiast creating beautiful, functional mobile applications with clean code and delightful user experiences." data-ar="مطور Flutter ومهتم بالذكاء الاصطناعي أصنع تطبيقات جوال جميلة ووظيفية ببرمجة نظيرة وتجارب مستخدم ممتعة.">Flutter developer and AI enthusiast creating beautiful, functional mobile applications with clean code and delightful user experiences.</p>
           
           <div class="social-links">
-            <a href="#" class="social-link">
+            <a href="https://github.com/osama-ahmed-alsharabi" class="social-link">
               <i class="fab fa-github"></i>
             </a>
-            <a href="#" class="social-link">
+            <a href="https://www.linkedin.com/in/osama-alsharabi-b6949a309/" class="social-link">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" class="social-link">
-              <i class="fab fa-twitter"></i>
+            <a href="https://wa.me/967778870086" class="social-link">
+              <i class="fab fa-whatsapp"></i>
             </a>
           </div>
         </div>
         
         <div class="footer-col">
-          <h3>Quick Links</h3>
+          <h3 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+            <li><a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a></li>
+            <li><a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a></li>
+            <li><a href="#contact" data-en="Contact" data-ar="اتصل بي">Contact</a></li>
           </ul>
         </div>
         
         <div class="footer-col">
-          <h3>Services</h3>
+          <h3 data-en="Services" data-ar="الخدمات">Services</h3>
           <ul class="footer-links">
-            <li><a href="#">Flutter Development</a></li>
-            <li><a href="#">UI/UX Design</a></li>
-            <li><a href="#">AI Integration</a></li>
-            <li><a href="#">App Consultation</a></li>
+            <li><a href="#" data-en="Flutter Development" data-ar="تطوير Flutter">Flutter Development</a></li>
+            <li><a href="#" data-en="UI/UX Design" data-ar="تصميم الواجهات">UI/UX Design</a></li>
+            <li><a href="#" data-en="AI Integration" data-ar="دمج الذكاء الاصطناعي">AI Integration</a></li>
+            <li><a href="#" data-en="App Consultation" data-ar="استشارات التطبيقات">App Consultation</a></li>
           </ul>
         </div>
       </div>
       
       <div class="copyright">
-        <p>&copy; 2023 Osama. All rights reserved.</p>
+        <p>&copy; 2023 <span class="name">Osama Alsharabi</span>. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
       </div>
     </div>
   </footer>
@@ -1137,20 +1246,51 @@
 
     // Language toggle
     const langButtons = document.querySelectorAll('.lang-btn');
+    let currentLang = 'en';
+    
+    function switchLanguage(lang) {
+      currentLang = lang;
+      
+      // Update all elements with data attributes
+      document.querySelectorAll('[data-en]').forEach(element => {
+        if (lang === 'en') {
+          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.placeholder = element.getAttribute('data-en-placeholder') || element.textContent;
+          } else {
+            element.textContent = element.getAttribute('data-en');
+          }
+        } else {
+          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.placeholder = element.getAttribute('data-ar-placeholder') || element.textContent;
+          } else {
+            element.textContent = element.getAttribute('data-ar');
+          }
+        }
+      });
+      
+      // Update direction and font
+      if (lang === 'ar') {
+        document.body.setAttribute('dir', 'rtl');
+        document.body.style.fontFamily = 'Cairo, Inter, sans-serif';
+      } else {
+        document.body.setAttribute('dir', 'ltr');
+        document.body.style.fontFamily = 'Inter, Cairo, sans-serif';
+      }
+      
+      // Update active button
+      langButtons.forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
     
     langButtons.forEach(button => {
       button.addEventListener('click', () => {
-        langButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        
-        // Here you would implement language switching logic
-        if (button.textContent === 'AR') {
-          document.body.style.direction = 'rtl';
-          document.body.style.fontFamily = 'Cairo, Inter, sans-serif';
-        } else {
-          document.body.style.direction = 'ltr';
-          document.body.style.fontFamily = 'Inter, Cairo, sans-serif';
-        }
+        const lang = button.getAttribute('data-lang');
+        switchLanguage(lang);
       });
     });
 
@@ -1167,20 +1307,27 @@
       
       // Here you would typically send the form data to a server
       // For now, we'll just show an alert
-      alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+      if (currentLang === 'en') {
+        alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+      } else {
+        alert(`شكراً لك ${name}! تم إرسال رسالتك. سأتواصل معك قريباً.`);
+      }
       contactForm.reset();
     });
 
     // Theme toggle
     const themeToggle = document.querySelector('.theme-toggle');
+    let currentTheme = 'dark';
     
     themeToggle.addEventListener('click', function() {
-      document.body.classList.toggle('light-theme');
-      
-      if (document.body.classList.contains('light-theme')) {
+      if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        currentTheme = 'light';
       } else {
+        document.documentElement.removeAttribute('data-theme');
         themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        currentTheme = 'dark';
       }
     });
 
@@ -1200,6 +1347,15 @@
           });
         }
       });
+    });
+
+    // Initialize name and title
+    document.querySelectorAll('.name').forEach(element => {
+      element.textContent = currentLang === 'en' ? 'Osama Alsharabi' : 'أسامة الشرعبي';
+    });
+    
+    document.querySelectorAll('.title').forEach(element => {
+      element.textContent = currentLang === 'en' ? 'Flutter & AI Developer' : 'مطور Flutter والذكاء الاصطناعي';
     });
   </script>
 </body>
